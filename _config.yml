@@ -1,0 +1,104 @@
+# Site Settings
+name: Webdev | 2HAAS
+title: Webdev 2HAAS
+description: এই ওয়েবসাইটটি মূলত বানানো হয়েছে টেকনিক্যাল বিভিন্ন সাপোর্ট এবং বাংলায় ওয়েব ডেভলপমেন্ট কোর্স তৈরীর জন্য।
+tags:
+  - blog
+  - webdev
+  - jekyll
+  - website designing
+  - html
+  - css
+  - js
+  - javascript
+  - liquid
+show_hero: true
+menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+  - title: Feed
+    url: /feed.xml
+email: 2haas2016@gmail.com
+
+
+# Social Media Settings
+
+github_username: 2HAAS
+facebook_username: 2haas
+twitter_username: 2haas_tw
+instagram_username: 2haas_insta
+linkedin_username: 
+medium_username: 
+
+
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: false
+show_modal_on_finish_post: true
+two_columns_layout: true
+
+
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://webdev.2haas.com" # the base hostname & protocol for your site
+google_analytics: ""
+language: "bn"
+categories_folder: category
+sent_message_url: "/contact/message-sent/"
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
+
+use_logo: true
+
+# Content paginator
+paginate_content:
+  enabled: true
+  debug: false
+  collections:
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
+
+# SASS
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
+
+# Exclude my node related stuff
+exclude: [
+  'package.json',
+  'package-lock.json',
+  'src',
+  'node_modules',
+  'initpost.sh',
+  'Gemfile',
+  'Gemfile.lock',
+  'gulpfile.js',
+  'README.md'
+]
+
