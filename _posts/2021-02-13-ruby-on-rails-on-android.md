@@ -94,7 +94,7 @@ pkg install libffi libffi-dev libsqlite libsqlite-dev
 এখন আমরা মূলত Nodejs ইন্সটল করব ওয়েব অ্যাপটির জন্য
 
 ```
-pkg install nodejs
+pkg install nodejs yarn curl
 ```
 এবার পালা আমাদের রুবি সফলভাবে ইন্সটল করার!
 
