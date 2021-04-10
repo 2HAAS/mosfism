@@ -1,6 +1,6 @@
 # Site Settings
 name: Webdev | 2HAAS
-title: Webdev 2HAAS
+title: Webdev ~ 2HAAS
 description: এই ওয়েবসাইটটি মূলত বানানো হয়েছে টেকনিক্যাল বিভিন্ন সাপোর্ট এবং বাংলায় ওয়েব ডেভলপমেন্ট কোর্স তৈরীর জন্য।
 tags:
   - blog
@@ -60,7 +60,7 @@ collections:
     output: true
 paginate_path: "/page/:num/"
 
-use_logo: true
+use_logo: false
 
 # Content paginator
 paginate_content:
