@@ -40,7 +40,7 @@ Check your network connection and try again.
 ```
 Termux এর official remote server address: [http://termux.net/bootstrap/](http://termux.net/bootstrap/)
  
-![unable to install](/assets/img/upload/termux/unable to install.jpg)
+![unable to install](/assets/img/upload/unable to install.jpg)
 
 #### প্রাথমিক অভিযান
 বেসিক অপারেশনটি এখনও শিখতে হবে এবং আপনি অর্ধেক প্রচেষ্টা দিয়ে দ্বিগুণ করতে পারেন।
@@ -76,7 +76,7 @@ Long press screen
 #### Common keys
 Common keys হল পিসিতে ব্যবহৃত কিবোর্ডের commonly used keyboard keys, যেমন: ESC, Tab, CTR, ALT keys, যেগুলো আমাদের দৈনন্দিন কাজের কর্মদক্ষতা বৃদ্ধি করে, তাই Termux এই অতিরিক্ত function key প্রদর্শন করে by default।
  
-![common keys](/assets/img/upload/termux/common keys.jpg)
+![common keys](/assets/img/upload/termux/commonkeys.jpg)
 
 এই ফাংশন গুলোকে ঢাকার জন্য Volume+ বাটন চেপে রেখে Q অথবা K প্রেস করলেই ঢেকে যাবে অর্থাৎ  'Volume+' + 'Q' or 'Volume+' + 'K'
 
@@ -191,7 +191,7 @@ extra-keys = [ \
 
 Termux app Restart করব ফাইলটা সেভ করার পর!
 
-![long press](/assets/img/upload/termux/custom special keys.jpg)
+![long press](/assets/img/upload/termux/customspecialkeys.jpg)
 
 নিচে লেখা Key হুবহু উপরের লেখাগুলোর মাঝে বসিয়ে আপনার ইচ্ছে মত কমান্ড তৈরি করতে পারেন!
 
@@ -221,7 +221,7 @@ F1~F12	F1-F12 keys
 #### Modify startup greeting
 default startup greeting এ আমরা এরকম লেখাগুলো দেখে থাকতে পারি:
 
-![default greeting](/assets/img/upload/termux/default greeting.jpg)
+![default greeting](/assets/img/upload/termux/defaultgreeting.jpg)
 
 মূলত আমরা যখন প্রথমবার এটি ব্যবহার করতে যাব তাতে যেন তো আমাদের খারাপ না লাগে ব্যবহার করতে বোর ফিল না করি সেজন্য আমরা নিচের কমান্ডগুলো দ্বারা লেখাটা এডিট করি।
  
@@ -232,7 +232,7 @@ nano $PREFIX/etc/motd
 
 এরপর সব লেখা কেটে নিচের লেখাটি এড করতে পারেন:
 
- ![edited greeting](/assets/img/upload/termux/edited greeting.jpg)
+ ![edited greeting](/assets/img/upload/termux/editedgreeting.jpg)
 
  এবার নিচের লেখাগুলো কপি করে পেস্ট করি:
 
@@ -313,7 +313,7 @@ apachectl start
 
  
 
-![apatche start](/assets/img/upload/termux/Apatche start.jpg)
+![apatche start](/assets/img/upload/termux/Apatchestart.jpg)
  
 
 The default path to Termux's native Apache website is:
@@ -423,7 +423,7 @@ LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
 
  
 
-![apatche start](/assets/img/upload/termux/resolve php.jpg)
+![apatche start](/assets/img/upload/termux/resolvephp.jpg)
 
 #### Parse PHP Test
 চলুন টেস্ট করি phpinfo() function ঠিকমতো কাজ করে কিনা:
@@ -436,7 +436,7 @@ echo '<?php phpinfo(); ?>' > $PREFIX/share/apache2/default-site/htdocs/index.php
 
  
 
-![parse php test](/assets/img/upload/termux/parse php test.jpg)
+![parse php test](/assets/img/upload/termux/parsephptest.jpg)
 
 #### MariaDB(MySQL)
 MariaDB হলো MySQL এর একটি সাধারণ রূপ! রিলেশনাল ডেটাবেজ সিস্টেম এটা। চলুন এটা ইন্সটল করা যাক!
@@ -449,7 +449,7 @@ Termux এ officially MariaDB রয়েছে, so it's easy to install:
 pkg install mariadb
 ```
 
-![apatche start](/assets/img/upload/termux/mysql version.jpg)
+![apatche start](/assets/img/upload/termux/mysqlversion.jpg)
 
 #### Start MySQL Service
 Since this session of MySQL survives after normal startup, like Debug debugging, it is useless to abort the current process using Ctrl + C -> at this time, and the experience is not elegant at all, so GLOBAL uses the nohup command that comes with Linux to launch it in the background.
@@ -464,7 +464,7 @@ nohup mysqld &
 
 এখন Ctrl + C -> ব্যবহার করে বর্তমান SQL Cancel করা যায়।
 
-![apatche start](/assets/img/upload/termux/nohup mysql.jpg)
+![apatche start](/assets/img/upload/termux/nohupmysql.jpg)
  
 ছবিটিতে 17115 process PID number হলো mysqld এর. আমরা নিচের command দিয়ে verify করব এটা ঠিক আছে কিনা:
 
@@ -476,7 +476,7 @@ ps aux|grep mysql
 PID number টি দেখছেন এই process:
 
 
-![ps aux](/assets/img/upload/termux/ps aux.jpg)
+![ps aux](/assets/img/upload/termux/psaux.jpg)
 
  
 
@@ -510,7 +510,7 @@ pkg install nginx
 
 After the installation is completed, it is the customary practice of Googuang to check the version information:
 
-![nginx version](/assets/img/upload/termux/nginx v.jpg)
+![nginx version](/assets/img/upload/termux/nginxv.jpg)
 
 
 **Start Nginx**
@@ -527,7 +527,7 @@ Then mobile direct local access : [http://127.0.0.1:8080]( http://127.0.0.1:8080
 যদি ঠিকভাবে চালু হয় তবে এরকম দেখা যেতে পারে:
 
  
-![ welcome ](/assets/img/upload/termux/welome nginx.jpg
+![ welcome ](/assets/img/upload/termux/welomenginx.jpg
 
  
 
