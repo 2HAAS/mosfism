@@ -40,7 +40,7 @@ Check your network connection and try again.
 ```
 Termux এর official remote server address: [http://termux.net/bootstrap/](http://termux.net/bootstrap/)
  
-![unable to install](/assets/img/upload/unable toinstall.jpg)
+![unable to install](/assets/img/upload/unabletoinstall.jpg)
 
 #### প্রাথমিক অভিযান
 বেসিক অপারেশনটি এখনও শিখতে হবে এবং আপনি অর্ধেক প্রচেষ্টা দিয়ে দ্বিগুণ করতে পারেন।
@@ -84,7 +84,7 @@ Common keys হল পিসিতে ব্যবহৃত কিবোর্�
 Ctrl key অধিকাংশ টাচ মোবাইলের কিবোর্ড এ থাকে না, এজন্য Termux এ volume down button দিয়ে Ctrl key এর কাজ করা যায়!
 
 For example, Volume Minus + L, touch keyboard এ প্রেস করা, Ctrl + L keyboard প্রেস করার সমান যা দিয়ে screen ক্লিয়ার করে।
-
+```
 Ctrl + A - > Move the cursor to the beginning of the line
 Ctrl + C - > Abort the current process
 Ctrl + D - > Log off terminal session
@@ -94,9 +94,11 @@ Ctrl + U - > Delete from cursor to beginning of line
 Ctrl + L - > Clear Terminal
 Ctrl + Z - > Suspend (Send SIGTSTP to) Current Process
 Ctrl + Alt + C - > Open a new session (for hacker keyboards only)
+```
 
 Volume keying একটি বিশেষ specific input তৈরি করতে পারে যেমন:
 
+```
 Volume Plus + E -> Esc key
 Volume Plus + T -> Tab key
 Volume Plus + 1 -> F1 (Volume Plus + 2 F2...And so on)
@@ -117,6 +119,7 @@ Volume Plus +. -> Ctrl + \ (SIGQUIT)
 Volume Plus+V->Display Volume Control
 Volume Plus+Q->Toggle Display Function Key View
 Volume Plus+K->Toggle Show Function Key View
+```
 
 #### Basic Commands
 Termux মূলত pkg commands ব্যবহার করে যা দিয়ে আমরা প্যাকেজ ইন্সটল করতে পারি। আমরা হয়তোবা apt command এর সাথে পরিচিত থাকতে পারি তবে pkg command আমরা ব্যবহার করতে পারি এখানে। যেমন:
@@ -194,7 +197,7 @@ Termux app Restart করব ফাইলটা সেভ করার পর!
 ![long press](/assets/img/upload/termux/customspecialkeys.jpg)
 
 নিচে লেখা Key হুবহু উপরের লেখাগুলোর মাঝে বসিয়ে আপনার ইচ্ছে মত কমান্ড তৈরি করতে পারেন!
-
+```
 Key	Explain
 CTRL	Special keys
 ALT	Special keys
@@ -217,6 +220,7 @@ BACKSLASH Backslash\
 QUOTE	Double Quote Key
 APOSTROPHE	Single Quote Key
 F1~F12	F1-F12 keys
+```
 
 #### Modify startup greeting
 default startup greeting এ আমরা এরকম লেখাগুলো দেখে থাকতে পারি:
@@ -299,7 +303,7 @@ pkg install vim-python
 #### Apache
 Apache is an open source Web server software, এর সাহায্যে আমরা ওয়েব সার্ভার সেটআপ করতে পারি।
 
-Install Apache
+**Install Apache**
  
 ```Bash
 pkg install apache2
