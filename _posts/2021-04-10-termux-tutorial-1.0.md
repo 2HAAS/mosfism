@@ -40,7 +40,7 @@ Check your network connection and try again.
 ```
 Termux এর official remote server address: [http://termux.net/bootstrap/](http://termux.net/bootstrap/)
  
-![unable to install](/assets/img/upload/unabletoinstall.jpg)
+![unable to install](/assets/img/upload/termux/unabletoinstall.jpg)
 
 #### প্রাথমিক অভিযান
 বেসিক অপারেশনটি এখনও শিখতে হবে এবং আপনি অর্ধেক প্রচেষ্টা দিয়ে দ্বিগুণ করতে পারেন।
