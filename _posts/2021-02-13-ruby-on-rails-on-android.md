@@ -5,7 +5,7 @@ title: Ruby on Rails, Android এ
 subtitle: Ruby on Rails on Android
 description: আমরা একটি রুবি অন রেলস ভিত্তিক ওয়েব এপ বানাতে চাই কিন্তু সমস্যা হল এটা করতে লিনাক্সের এনভায়রনমেন্ট লাগে বা সহজ করে বলতে গেলে একটি লিন্যাক্স অপারেটিং সিস্টেম সহ  কম্পিউটার প্রয়োজন পড়ে অথবা উইন্ডোজ এর সাথে বিশেষ কিছু অ্যাপ্লিকেশন এর ব্যবহার প্রয়োজন পড়ে। কিন্তু মূল সমস্যা হয় যাদের কোন কম্পিউটারই নেই তারা কী করবে? এই সমস্যা সমাধানের জন্য রয়েছে টারমাক্স 
 image: /assets/img/uploads/rubysuccess.jpg
-optimized_image: /assets/img/uploads/rubysuccess.jpg
+optimized_image: /assets/img/upload/rubysuccess.jpg
 category: ruby
 tags:
   - Ruby on Rails
@@ -146,6 +146,6 @@ rails server
 
 ইয়েস অ্যাপটি এখন ব্রাউজারে শো করছে এভাবে!!
 
-![রুবি লোকাল হোস্ট](/assets/img/uploads/rubysuccess.jpg)
+![রুবি লোকাল হোস্ট](/assets/img/upload/rubysuccess.jpg)
 
 এটা ছিল আমাদের সফল অভিযান! আপনার এখানে কোনো সমস্যা দেখা দিলে নিচে কমেন্ট করুন! **ধন্যবাদ**
