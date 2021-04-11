@@ -4,7 +4,7 @@ layout: post
 title: Termux Basic Tutorial
 subtitle: Termux Basic Tutorial
 description:  
-image: /assets/img/uploads/about termux.jpg
+image: /assets/img/uploads/termux/about termux.jpg
 optimized_image: /assets/img/uploads/termux/about termux.jpg
 category: tutorial
 tags:
