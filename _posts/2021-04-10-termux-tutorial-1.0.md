@@ -43,7 +43,9 @@ Termux এর official remote server address: [http://termux.net/bootstrap/](htt
 ![unable to install](/assets/img/upload/termux/unabletoinstall.jpg)
 
 #### প্রাথমিক অভিযান
-বেসিক অপারেশনটি এখনও শিখতে হবে এবং আপনি অর্ধেক প্রচেষ্টা দিয়ে দ্বিগুণ করতে পারেন।
+বেসিক অপারেশনটি এখনও শিখতে হবে এবং আপনি অর্ধেক প্রচেষ্টা দিয়ে দ্বিগুণ করতে পারেন। নিচের ভিডিওটি থেকে প্রাথমিক ভাবে ডাইরেক্টরি ভিত্তিক কাজটা করতে শিখতে পারেন।
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/npKUnK-eK-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Scale Text
 আপনি ফন্টের আকারটি সামঞ্জস্য করতে জুম অঙ্গভঙ্গি ব্যবহার করতে পারেন হ্যাঁ, কেবল জুম ইন করুন এবং আউট করুন দুটো আঙ্গুল স্ক্রিনে ব্যবহার করে।
