@@ -319,7 +319,7 @@ apachectl start
 
  
 
-![apatche start](/assets/img/upload/termux/Apatche start.jpg)
+![apatche start](/assets/img/upload/termux/Apachestart.jpg)
  
 
 The default path to Termux's native Apache website is:
