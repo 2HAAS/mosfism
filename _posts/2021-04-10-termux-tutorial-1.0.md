@@ -319,7 +319,7 @@ apachectl start
 
  
 
-![apatche start](/assets/img/upload/termux/Apatchestart.jpg)
+![apatche start](/assets/img/upload/termux/Apatche start.jpg)
  
 
 The default path to Termux's native Apache website is:
@@ -429,7 +429,7 @@ LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
 
  
 
-![apatche start](/assets/img/upload/termux/resolvephp.jpg)
+![](/assets/img/upload/termux/resolvephp.jpg)
 
 #### Parse PHP Test
 চলুন টেস্ট করি phpinfo() function ঠিকমতো কাজ করে কিনা:
@@ -455,7 +455,7 @@ Termux এ officially MariaDB রয়েছে, so it's easy to install:
 pkg install mariadb
 ```
 
-![apatche start](/assets/img/upload/termux/mysqlversion.jpg)
+![](/assets/img/upload/termux/mysqlversion.jpg)
 
 #### Start MySQL Service
 Since this session of MySQL survives after normal startup, like Debug debugging, it is useless to abort the current process using Ctrl + C -> at this time, and the experience is not elegant at all, so GLOBAL uses the nohup command that comes with Linux to launch it in the background.
@@ -470,7 +470,7 @@ nohup mysqld &
 
 এখন Ctrl + C -> ব্যবহার করে বর্তমান SQL Cancel করা যায়।
 
-![apatche start](/assets/img/upload/termux/nohupmysql.jpg)
+![](/assets/img/upload/termux/nohupmysql.jpg)
  
 ছবিটিতে 17115 process PID number হলো mysqld এর. আমরা নিচের command দিয়ে verify করব এটা ঠিক আছে কিনা:
 
