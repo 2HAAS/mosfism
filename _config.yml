@@ -24,7 +24,6 @@ menu:
     url: /feed.xml
 email: mosfism@gmail.com
 
-
 # Social Media Settings
 
 github_username: 
@@ -44,8 +43,8 @@ two_columns_layout: true
 
 # Advanced Settings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://10.18.0.100:3000" # the base hostname & protocol for your site
-# url: "https://webdev.2haas.com" # the base hostname & protocol for your site
+# url: "" # the base hostname & protocol for your site
+url: "https://mosfism.2haas.com" # the base hostname & protocol for your site
 google_analytics: ""
 language: "en-BD"
 categories_folder: category
