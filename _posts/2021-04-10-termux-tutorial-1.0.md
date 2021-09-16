@@ -4,8 +4,8 @@ layout: post
 title: Termux Basic Tutorial
 subtitle: Termux Basic Tutorial
 description:  
-image: /assets/img/upload/termux/about termux.jpg
-optimized_image: /assets/img/upload/termux/about termux.jpg
+image: /assets/img/upload/termux/about_termux.jpg
+optimized_image: /assets/img/upload/termux/about_termux.jpg
 category: tutorial
 tags:
   - terminal on Android
@@ -17,23 +17,20 @@ Termux হলো একটি Advanced Terminal Emulator যেটার সা�
 
 ## ডকুমেন্টেশন
 
-[Termux website](https://termux.com/)
-[Github project address](https://github.com/termux/termux-app)
+[Termux website](https://termux.com/)  
+[Github project address](https://github.com/termux/termux-app)  
 [Official English WiKi Documentation](https://wiki.termux.com/wiki/Main_Page)
 
 ## অ্যাপলিকেশন ডাউনলোড
 
-[Google Play Download Address](https://play.google.com/store/apps/details?id=com.termux)
+[Google Play Download Address](https://play.google.com/store/apps/details?id=com.termux)  
 [F-Droid download address](https://f-droid.org/packages/com.termux/)
 
 #### Initialization
 
-The first time you start Termux, you need to load data from a remote server, but you may encounter this problem:
+Termux প্রথমবার চালু করলে কিছু ফাইল অন্য সার্ভার থেকে ডাউনলোড হতে না পেরে এই সমস্যা দেখাতে পারে:
 
- 
-Verilog
-
-```bash
+```
 Ubable to install
 Termux was unable to install the bootstrap packages.
 Check your network connection and try again.
@@ -149,7 +146,7 @@ dpkg --remove [package name] # Uninstall Package
 dpkg -l                      # View installed packages
 man dpkg                     # View detailed documentation
 ```
-#### directory structure
+#### Directory Structure
  
 ```Bash
 echo $HOME
@@ -264,21 +261,19 @@ pkg update
 pkg install nano curl perl wget git tree  -y
 ```
 
-#### development environment
+#### Development Environment
 Termux strong development environment সাপোর্ট করে যা C, Python, Java, PHP, Ruby এবং আরো অনেক development environments perfectly সাপোর্ট করে.
 
-##### editor
+##### Editor
 You'll have to toss around with the editor before you write the code. After all, the sharpener doesn't cut firewood by mistake.Termux supports multiple editors and is fully suited for everyday use.
 
-**Emacs**
-Emacs অসাধারণ একটা editor যেটা খুব সুন্দর ভাবে কাজ করে এবং নিচের কমান্ড ইন্সটল করা হয়
+**Emacs** অসাধারণ একটা editor যেটা খুব সুন্দর ভাবে কাজ করে এবং নিচের কমান্ড দিয়ে এটা ইন্সটল করা হয়
 
  
 ```Bash
 pkg install emacs  
 ```
-**nano**
-nano is a small and beautiful editor. এর সবচেয়ে চমৎকার একটা বৈশিষ্ট্য হচ্ছে মাল্টিপল ট্যাবে কাজ করা যায়।
+**nano** is a small and beautiful editor. এর সবচেয়ে চমৎকার একটা বৈশিষ্ট্য হচ্ছে মাল্টিপল ট্যাবে কাজ করা যায়।
 
 It's also easy to install:
 
@@ -287,8 +282,7 @@ It's also easy to install:
 pkg install nano
 ```
 
-**Vim**
-Vim কে editor দের বস বলা যায়. Basically, Linux distributions গুলোর সাথে এটা বাই ডিফল্ট দেওয়া থাকে!
+**Vim** কে editor দের বস বলা যায়. Basically, Linux distributions গুলোর সাথে এটা বাই ডিফল্ট দেওয়া থাকে!
 
  
 ```Bash
@@ -310,7 +304,7 @@ Apache is an open source Web server software, এর সাহায্যে �
 ```Bash
 pkg install apache2
 ```
-*Start Apache*
+**Start Apache**
  
 ```Bash
 apachectl start
@@ -328,12 +322,12 @@ The default path to Termux's native Apache website is:
 $PREFIX/share/apache2/default-site/htdocs/index.html
 ```
 
-*Stop Apache*
+**Stop Apache**
  
 ```Bash
 apachectl stop
 ```
-*Restart Apache*
+**Restart Apache**
  
 ```Bash
 apachectl restart
@@ -430,6 +424,8 @@ LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
  
 
 ![](/assets/img/upload/termux/resolvephp.jpg)
+
+
 
 #### Parse PHP Test
 চলুন টেস্ট করি phpinfo() function ঠিকমতো কাজ করে কিনা:

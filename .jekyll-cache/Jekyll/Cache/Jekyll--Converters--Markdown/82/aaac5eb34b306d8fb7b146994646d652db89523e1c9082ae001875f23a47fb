@@ -1,0 +1,497 @@
+I"�l<p>Termux হলো একটি Advanced Terminal Emulator যেটার সাহায্যে আমরা বিভিন্ন বড় বড় কাজ করতে পারি তাই এটাকে সুন্দর এবং পরিপূর্ণ ভাবে লিখে পোস্ট করার চেষ্টা করলাম!</p>
+
+<h2 id="ডকুমেন্টেশন">ডকুমেন্টেশন</h2>
+
+<p><a href="https://termux.com/">Termux website</a><br />
+<a href="https://github.com/termux/termux-app">Github project address</a><br />
+<a href="https://wiki.termux.com/wiki/Main_Page">Official English WiKi Documentation</a></p>
+
+<h2 id="অ্যাপলিকেশন-ডাউনলোড">অ্যাপলিকেশন ডাউনলোড</h2>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.termux">Google Play Download Address</a><br />
+<a href="https://f-droid.org/packages/com.termux/">F-Droid download address</a></p>
+
+<h4 id="initialization">Initialization</h4>
+
+<p>Termux প্রথমবার চালু করলে কিছু ফাইল অন্য সার্ভার থেকে ডাউনলোড হতে না পেরে এই সমস্যা দেখাতে পারে:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ubable to install
+Termux was unable to install the bootstrap packages.
+Check your network connection and try again.
+</code></pre></div></div>
+<p>Termux এর official remote server address: <a href="http://termux.net/bootstrap/">http://termux.net/bootstrap/</a></p>
+
+<p><img src="/assets/img/upload/termux/unabletoinstall.jpg" alt="unable to install" /></p>
+
+<h4 id="প্রাথমিক-অভিযান">প্রাথমিক অভিযান</h4>
+<p>বেসিক অপারেশনটি এখনও শিখতে হবে এবং আপনি অর্ধেক প্রচেষ্টা দিয়ে দ্বিগুণ করতে পারেন। নিচের ভিডিওটি থেকে প্রাথমিক ভাবে ডাইরেক্টরি ভিত্তিক কাজটা করতে শিখতে পারেন।</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/npKUnK-eK-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h4 id="scale-text">Scale Text</h4>
+<p>আপনি ফন্টের আকারটি সামঞ্জস্য করতে জুম অঙ্গভঙ্গি ব্যবহার করতে পারেন হ্যাঁ, কেবল জুম ইন করুন এবং আউট করুন দুটো আঙ্গুল স্ক্রিনে ব্যবহার করে।</p>
+
+<h4 id="long-press-screen">Long press screen</h4>
+
+<p>screen এ Long press করলে display তে menu items (copy, paste, more সহ) copy or paste করতে।</p>
+
+<p><img src="/assets/img/upload/termux/longpress.jpg" alt="long press" /></p>
+
+<p>More menu এর বিবরণ:</p>
+
+<pre><code class="language-Bash">Long press screen
+├── COPY:    # copy
+├── PASTE:   # paste
+├── More:    # More
+   ├── Select URL:             # Extract all web addresses from the screen
+   └── Share transcipt:        # Share Command Scripts
+   └── Reset:                  # Reset
+   └── Kill process:           # Kill the current session process
+   └── Style:                  # Style color matching needs to be installed by yourself
+   └── Keep screen on:         # Keep the screen always on
+   └── Help:                   # Help Documentation
+</code></pre>
+
+<h4 id="common-keys">Common keys</h4>
+<p>Common keys হল পিসিতে ব্যবহৃত কিবোর্ডের commonly used keyboard keys, যেমন: ESC, Tab, CTR, ALT keys, যেগুলো আমাদের দৈনন্দিন কাজের কর্মদক্ষতা বৃদ্ধি করে, তাই Termux এই অতিরিক্ত function key প্রদর্শন করে by default।</p>
+
+<p><img src="/assets/img/upload/termux/commonkeys.jpg" alt="common keys" /></p>
+
+<p>এই ফাংশন গুলোকে ঢাকার জন্য Volume+ বাটন চেপে রেখে Q অথবা K প্রেস করলেই ঢেকে যাবে অর্থাৎ  ‘Volume+’ + ‘Q’ or ‘Volume+’ + ‘K’</p>
+
+<h4 id="shortcut-table">Shortcut table</h4>
+<p>Ctrl key অধিকাংশ টাচ মোবাইলের কিবোর্ড এ থাকে না, এজন্য Termux এ volume down button দিয়ে Ctrl key এর কাজ করা যায়!</p>
+
+<p>For example, Volume Minus + L, touch keyboard এ প্রেস করা, Ctrl + L keyboard প্রেস করার সমান যা দিয়ে screen ক্লিয়ার করে।</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl + A - &gt; Move the cursor to the beginning of the line
+Ctrl + C - &gt; Abort the current process
+Ctrl + D - &gt; Log off terminal session
+Ctrl + E - &gt; Move cursor to end of line
+Ctrl + K - &gt; Delete from cursor to end of line
+Ctrl + U - &gt; Delete from cursor to beginning of line
+Ctrl + L - &gt; Clear Terminal
+Ctrl + Z - &gt; Suspend (Send SIGTSTP to) Current Process
+Ctrl + Alt + C - &gt; Open a new session (for hacker keyboards only)
+</code></pre></div></div>
+
+<p>Volume keying একটি বিশেষ specific input তৈরি করতে পারে যেমন:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Volume Plus + E -&gt; Esc key
+Volume Plus + T -&gt; Tab key
+Volume Plus + 1 -&gt; F1 (Volume Plus + 2 F2...And so on)
+Volume Plus + 0 -&gt; F10
+Volume Plus + B -&gt; Alt + B, returns a word when using readline
+Volume Plus + F -&gt; Alt + F, forward a word when using readline
+Volume Plus+X -&gt; Alt+X
+Volume Plus+W-&gt;Up Arrow
+Volume Plus+A-&gt;Left Arrow Key
+Volume Plus+S-&gt;Down Arrow
+Volume Plus+D-&gt;Right Arrow Key
+Volume Plus + L -&gt; | (pipe character)
+Volume Plus + H -&gt; (wavy character)
+Volume Plus + U -&gt; _(Underline character)
+Volume Plus+P-&gt;Previous Page
+Volume Plus+N-&gt;Next Page
+Volume Plus +. -&gt; Ctrl + \ (SIGQUIT)
+Volume Plus+V-&gt;Display Volume Control
+Volume Plus+Q-&gt;Toggle Display Function Key View
+Volume Plus+K-&gt;Toggle Show Function Key View
+</code></pre></div></div>
+
+<h4 id="basic-commands">Basic Commands</h4>
+<p>Termux মূলত pkg commands ব্যবহার করে যা দিয়ে আমরা প্যাকেজ ইন্সটল করতে পারি। আমরা হয়তোবা apt command এর সাথে পরিচিত থাকতে পারি তবে pkg command আমরা ব্যবহার করতে পারি এখানে। যেমন:</p>
+
+<pre><code class="language-Bash">pkg search &lt;query&gt;              # Search packages
+pkg install &lt;package&gt;           # Installation package
+pkg uninstall &lt;package&gt;         # Uninstall Package
+pkg reinstall &lt;package&gt;         # Reinstall Package
+pkg update                      # Update Source
+pkg upgrade                     # Upgrade Package
+pkg list-all                    # List all packages available for installation
+pkg list-installed              # List installed packages
+pkg show &lt;package&gt;              # Show details of a package
+pkg files &lt;package&gt;             # Show the path of the folder associated with a package
+</code></pre>
+
+<h4 id="software-installation">Software Installation</h4>
+<p>এই পদ্ধতিতে আমরা pkg command ব্যবহার করে package file এর ব্যবহার করতে পারি, আমরা চাইলে ডেবিয়ান প্যাকেজ ইন্সটল করতে পারি dpkg দ্বারা:</p>
+
+<pre><code class="language-Bash">dpkg -i ./package.de         # Install deb package
+dpkg --remove [package name] # Uninstall Package
+dpkg -l                      # View installed packages
+man dpkg                     # View detailed documentation
+</code></pre>
+<h4 id="directory-structure">Directory Structure</h4>
+
+<pre><code class="language-Bash">echo $HOME
+/data/data/com.termux/files/home
+
+echo $PREFIX
+/data/data/com.termux/files/usr
+
+echo $TMPPREFIX
+/data/data/com.termux/files/usr/tmp/
+</code></pre>
+<p>যারা অনেকদিন ধরে Linux ব্যবহার করছেন তারা হয়তো HOME path টি computer গুলো থেকে আলাদা পাবে কারণ এটার বিশেষ ডিজাইন এন্ড্রয়েড এর সাথে খাপ খাওয়ার জন্য বানানো.</p>
+
+<h4 id="customize-common-keys">Customize common keys</h4>
+<p>Termux v0.66 release হওয়ার পর ~/.termux/Termux.propertiesFile আমরা common function keys চাইলে পরিবর্তন করতে পারি! আমরা নিজেদের প্রয়োজনমতো নিজেরাই এটা configure করতে পারব.</p>
+
+<p>এখানে ফাইলটি  configure এর উদাহরণ দেওয়া হল:</p>
+
+<pre><code class="language-Bash"># New and Edit Profile
+nano ~/.termux/termux.properties
+</code></pre>
+
+<p>যদি Nano Editor ওপেন না হয় তাহলে আমরা নিচের কমান্ড দিয়ে আগে ডাইরেক্টর টি বানাবো,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/.termux
+</code></pre></div></div>
+<p>এরপর আবার আগের কমান্ড দিয়ে Nano Editor চালু করব!</p>
+
+<p>এর মধ্যে আমরা যা লিখবো:</p>
+
+<pre><code class="language-Bash">extra-keys = [ \
+ ['ESC','|','/','`','UP','QUOTE','APOSTROPHE'], \
+ ['TAB','CTRL','~','LEFT','DOWN','RIGHT','ENTER'] \
+]
+</code></pre>
+
+<p>Termux app Restart করব ফাইলটা সেভ করার পর!</p>
+
+<p><img src="/assets/img/upload/termux/customspecialkeys.jpg" alt="long press" /></p>
+
+<p>নিচে লেখা Key হুবহু উপরের লেখাগুলোর মাঝে বসিয়ে আপনার ইচ্ছে মত কমান্ড তৈরি করতে পারেন!</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Key	Explain
+CTRL	Special keys
+ALT	Special keys
+FN	Special keys
+ESC	Exit key
+TAB	Table Key
+HOME	In situ bond
+END	end key
+PGUP	Page Up Key
+PGDN	Page Down Key
+INS	Insert key
+DEL	Delete key
+BKSP	Backspace key
+UP	On the arrow keys
+LEFT	Arrow key left
+RIGHT	Arrow key right
+DOWN	Under arrow keys
+ENTER Enter key
+BACKSLASH Backslash\
+QUOTE	Double Quote Key
+APOSTROPHE	Single Quote Key
+F1~F12	F1-F12 keys
+</code></pre></div></div>
+
+<h4 id="modify-startup-greeting">Modify startup greeting</h4>
+<p>default startup greeting এ আমরা এরকম লেখাগুলো দেখে থাকতে পারি:</p>
+
+<p><img src="/assets/img/upload/termux/defaultgreeting.jpg" alt="default greeting" /></p>
+
+<p>মূলত আমরা যখন প্রথমবার এটি ব্যবহার করতে যাব তাতে যেন তো আমাদের খারাপ না লাগে ব্যবহার করতে বোর ফিল না করি সেজন্য আমরা নিচের কমান্ডগুলো দ্বারা লেখাটা এডিট করি।</p>
+
+<pre><code class="language-Bash">nano $PREFIX/etc/motd
+</code></pre>
+
+<p>এরপর সব লেখা কেটে নিচের লেখাটি এড করতে পারেন:</p>
+
+<p><img src="/assets/img/upload/termux/editedgreeting.jpg" alt="edited greeting" /></p>
+
+<p>এবার নিচের লেখাগুলো কপি করে পেস্ট করি:</p>
+
+<pre><code class="language-Ini">  _____                              
+ |_   _|__ _ __ _ __ ___  _   ___  __
+   | |/ _ \ '__| '_ ` _ \| | | \ \/ /
+   | |  __/ |  | | | | | | |_| |&gt;  &lt; 
+   |_|\___|_|  |_| |_| |_|\__,_/_/\_\
+   
+   
+</code></pre>
+<h4 id="install-base-tools">Install Base Tools</h4>
+
+<p>নিচের ইনস্টলেশন কমান্ডটি ব্যবহার করে কিছু বেসিক টুল ইনস্টল করা যাক:</p>
+
+<pre><code class="language-Bash">pkg update
+</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg install nano curl perl wget git tree  -y
+</code></pre></div></div>
+
+<h4 id="development-environment">Development Environment</h4>
+<p>Termux strong development environment সাপোর্ট করে যা C, Python, Java, PHP, Ruby এবং আরো অনেক development environments perfectly সাপোর্ট করে.</p>
+
+<h5 id="editor">Editor</h5>
+<p>You’ll have to toss around with the editor before you write the code. After all, the sharpener doesn’t cut firewood by mistake.Termux supports multiple editors and is fully suited for everyday use.</p>
+
+<p><strong>Emacs</strong> অসাধারণ একটা editor যেটা খুব সুন্দর ভাবে কাজ করে এবং নিচের কমান্ড দিয়ে এটা ইন্সটল করা হয়</p>
+
+<pre><code class="language-Bash">pkg install emacs  
+</code></pre>
+<p><strong>nano</strong> is a small and beautiful editor. এর সবচেয়ে চমৎকার একটা বৈশিষ্ট্য হচ্ছে মাল্টিপল ট্যাবে কাজ করা যায়।</p>
+
+<p>It’s also easy to install:</p>
+
+<pre><code class="language-Bash">pkg install nano
+</code></pre>
+
+<p><strong>Vim</strong> কে editor দের বস বলা যায়. Basically, Linux distributions গুলোর সাথে এটা বাই ডিফল্ট দেওয়া থাকে!</p>
+
+<pre><code class="language-Bash">pkg install vim
+</code></pre>
+
+<p>Officially, vim-python রিলিজ হয়েছে যা দিয়ে Python-related কাজ করা সম্ভব</p>
+
+<pre><code class="language-Bash">pkg install vim-python
+</code></pre>
+
+<h4 id="apache">Apache</h4>
+<p>Apache is an open source Web server software, এর সাহায্যে আমরা ওয়েব সার্ভার সেটআপ করতে পারি।</p>
+
+<p><strong>Install Apache</strong></p>
+
+<pre><code class="language-Bash">pkg install apache2
+</code></pre>
+<p><strong>Start Apache</strong></p>
+
+<pre><code class="language-Bash">apachectl start
+</code></pre>
+<p>এরপর ব্রাউজারে নিচের লিঙ্কে গেলে: <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> এরকম দেখাবে:</p>
+
+<p><img src="/assets/img/upload/termux/Apachestart.jpg" alt="apatche start" /></p>
+
+<p>The default path to Termux’s native Apache website is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$PREFIX/share/apache2/default-site/htdocs/index.html
+</code></pre></div></div>
+
+<p><strong>Stop Apache</strong></p>
+
+<pre><code class="language-Bash">apachectl stop
+</code></pre>
+<p><strong>Restart Apache</strong></p>
+
+<pre><code class="language-Bash">apachectl restart
+</code></pre>
+
+<h4 id="apache-resolves-php">Apache Resolves PHP</h4>
+<p>Apache, PHP, MySQL তৈরি হয়ে গেছে এখন একটি 
+Apache LAMPP platform তৈরি করব Android platform এ .</p>
+
+<h4 id="install-php-apache">Install php-apache</h4>
+<p>The default Apache cannot resolve PHP, so we need to install the appropriate packages:</p>
+
+<pre><code class="language-Bash">pkg install php-apache
+</code></pre>
+
+<h4 id="configure-apache">Configure Apache</h4>
+<p>Apache এর default configuration file পাবো Termux এর এই ফোল্ডারে:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$PREFIX/etc/apache2/httpd.conf
+</code></pre></div></div>
+<p>configuration file সরাসরি এডিট করুন:</p>
+
+<pre><code class="language-Bash">vim /data/data/com.termux/files/usr/etc/apache2/httpd.conf
+</code></pre>
+<p>PHP এর মডিউল আলাদা করে configuration file এ থাকে না! so we need to add PHP7 modules manually:</p>
+
+<pre><code class="language-Bash">LoadModule php7_module /data/data/com.termux/files/usr/libexec/apache2/libphp7.so
+</code></pre>
+<p>এবং নিচের লাইনটা অ্যাড করুন:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;FilesMatch \.php$&gt;
+  SetHandler application/x-httpd-php
+&lt;/FilesMatch&gt; 
+</code></pre></div></div>
+<p>Next, নিচে যেখানে default home page টি configured করা সেখানে  home page এ পিএইচপির Index.php এড করবো:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;IfModule dir_module&gt;
+  DirectoryIndex index.php index.html
+&lt;/IfModule&gt;
+</code></pre></div></div>
+<p>এর অর্থ site directory এর মূল পাতা হল Index.php
+এটুক আলাদা করে এড করা লাগবে!</p>
+
+<p>Apache এর configuration file এডিট করার পর, Apache সার্ভার রিস্টার্ট করলে তা আমাদেরকে ভুল হয়েছে বলে নোটিশ দেখাবে:</p>
+
+<pre><code class="language-Verilog">Apache is running a threaded MPM, but your PHP Module is not compiled to be threadsafe.  You need to recompile PHP.
+AH00013: Pre-configuration failed
+</code></pre>
+
+<p>ভয় পাবেন না! এটা কোন বড় সমস্যা না! এর সমাধান,:</p>
+
+<h4 id="resolve-apache-php-error">Resolve Apache PHP error</h4>
+<p>আগে নিচের লাইনগুলো খুঁজুন!</p>
+
+<pre><code class="language-Properties">LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
+</code></pre>
+
+<p>এবার কোডটিকে এভাবে কমেন্ট করে নিচের মতো করে ফেলুন লেখাটাকে:</p>
+
+<pre><code class="language-Properties">#LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
+</code></pre>
+
+<p>এরপর নিচের লাইনগুলো খুঁজুন:</p>
+
+<pre><code class="language-Properties">#LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
+</code></pre>
+
+<p>এবার এই লেখাটাকে অন কমেন্ট করে দিলে এরকম পাবো:</p>
+
+<pre><code class="language-Properties">LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
+</code></pre>
+
+<p>সব দেখতে এমন হবে:</p>
+
+<p><img src="/assets/img/upload/termux/resolvephp.jpg" alt="" /></p>
+
+<h4 id="parse-php-test">Parse PHP Test</h4>
+<p>চলুন টেস্ট করি phpinfo() function ঠিকমতো কাজ করে কিনা:</p>
+
+<pre><code class="language-Bash">echo '&lt;?php phpinfo(); ?&gt;' &gt; $PREFIX/share/apache2/default-site/htdocs/index.php
+</code></pre>
+<p>এরপর দেখুন: <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> effect টা দেখুন:</p>
+
+<p><img src="/assets/img/upload/termux/parsephptest.jpg" alt="parse php test" /></p>
+
+<h4 id="mariadbmysql">MariaDB(MySQL)</h4>
+<p>MariaDB হলো MySQL এর একটি সাধারণ রূপ! রিলেশনাল ডেটাবেজ সিস্টেম এটা। চলুন এটা ইন্সটল করা যাক!</p>
+
+<p><strong>Install MariaDB</strong>
+Termux এ officially MariaDB রয়েছে, so it’s easy to install:</p>
+
+<pre><code class="language-Bash">pkg install mariadb
+</code></pre>
+
+<p><img src="/assets/img/upload/termux/mysqlversion.jpg" alt="" /></p>
+
+<h4 id="start-mysql-service">Start MySQL Service</h4>
+<p>Since this session of MySQL survives after normal startup, like Debug debugging, it is useless to abort the current process using Ctrl + C -&gt; at this time, and the experience is not elegant at all, so GLOBAL uses the nohup command that comes with Linux to launch it in the background.</p>
+
+<p>যেহেতু মাইএসকিউএলের এই service টি সাধারণ ভাবে শুরু হয়, একটি শুরু করার জন্য নিচের কমান্ডটি প্রয়োগ করি।</p>
+
+<pre><code class="language-Bash">nohup mysqld &amp;
+</code></pre>
+
+<p>এখন Ctrl + C -&gt; ব্যবহার করে বর্তমান SQL Cancel করা যায়।</p>
+
+<p><img src="/assets/img/upload/termux/nohupmysql.jpg" alt="" /></p>
+
+<p>ছবিটিতে 17115 process PID number হলো mysqld এর. আমরা নিচের command দিয়ে verify করব এটা ঠিক আছে কিনা:</p>
+
+<pre><code class="language-Bash">ps aux|grep mysql
+</code></pre>
+
+<p>PID number টি দেখছেন এই process:</p>
+
+<p><img src="/assets/img/upload/termux/psaux.jpg" alt="ps aux" /></p>
+
+<p><strong>Tips for running nohup</strong></p>
+
+<pre><code class="language-Ini">nohup: ignoring input and appending output to `nohup.out'
+</code></pre>
+
+<p><strong>Stop MySQL Service</strong>
+এখানে MySQL service Termux এ সহজে বন্ধ করার কোন উপায় নেই। 
+তবে আপনি ফোর্স পূর্বক এটিকে বন্ধ করতে পারেন 
+নিচের কমান্ডটি  দ্বারা এটিকে বন্ধ করুন:</p>
+
+<pre><code class="language-Bash">kill -9 PID
+</code></pre>
+
+<h4 id="nginx">Nginx</h4>
+<p>Nginx একটি শক্তিশালী ওয়েব সার্ভার যেটাতে আমরা খুব সুন্দর ভাবে বিভিন্ন ধরনের ওয়েবসাইট বানাতে পারি।</p>
+
+<h4 id="install-nginx">Install Nginx</h4>
+<p>Nginx ইনস্টল করা খুব সহজ কেবল একটি command:</p>
+
+<pre><code class="language-Bash">pkg install nginx
+</code></pre>
+
+<p>After the installation is completed, it is the customary practice of Googuang to check the version information:</p>
+
+<p><img src="/assets/img/upload/termux/nginxv.jpg" alt="nginx version" /></p>
+
+<p><strong>Start Nginx</strong>
+Earlier versions of Termux require a termux-chroot environment to successfully start Nginx, and new versions of Termux can be started directly, which is convenient:</p>
+
+<pre><code class="language-Bash">nginx
+</code></pre>
+
+<p>Nginx এর কমন পোর্ট হলো 8080।</p>
+
+<p>Then mobile direct local access : <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a>
+যদি ঠিকভাবে চালু হয় তবে এরকম দেখা যেতে পারে:</p>
+
+<p>![ welcome ](/assets/img/upload/termux/welomenginx.jpg</p>
+
+<p><strong>Restart Nginx</strong>
+Nginx কে রিস্টার্ট করা হয় নিচের রিলোড কমান্ড এর মাধ্যমে:</p>
+
+<pre><code class="language-Bash">nginx -s reload
+</code></pre>
+<p><strong>Stop Nginx</strong></p>
+
+<pre><code class="language-Bash">nginx -s stop
+</code></pre>
+<p>অথবা</p>
+
+<pre><code class="language-Bash">nginx -s quit
+</code></pre>
+<p>এটিকে বন্ধ না করা হলে পেছনে এটি সর্বদা চালু থাকবে এবং ফোনে সমস্যা হতে পারে।</p>
+
+<h4 id="nginx-parses-php">Nginx parses PHP</h4>
+<p>Nginx parses PHP এর সাহায্যে আমরা ওয়ার্ডপ্রেস ইন্সটল করতে পারি.</p>
+
+<p><strong>Install php-fpm</strong></p>
+
+<p>Nginx নিজের থেকে PHP প্রসেস করতে পারেন। এটা কেবল সার্ভার হিসেবে কাজ করে।
+এটি কেবলই একটি ওয়েব সার্ভার যেটা PHP-FPM is a PHP FastCGI ম্যানেজার! নিচের কমান্ড থেকে এটিকে ইন্সটল করি।</p>
+
+<pre><code class="language-Bash">pkg install php-fpm
+</code></pre>
+
+<h4 id="wordpress">WordPress</h4>
+<p>WordPress হলো একটি free and open source blog software এবং content management system যা তৈরি হয়েছে PHP and MySQL দ্বারা। আপনার Termux এ যদি MySQL, PHP, and Nginx, তাহলে এ প্রসেস ফলো করতে পারেন!</p>
+
+<p><strong>New Database</strong>
+এর জন্য প্রয়োজন একটি database. WordPress installations এর উপায়:</p>
+
+<p><strong>Sql</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -uroot -p*** -e"create database wordpress;show databases;"
+</code></pre></div></div>
+
+<p>***Here’s mysql’s password</p>
+
+<p><img src="/assets/img/upload/termux/5f46ea6ee6e7f9b94fbfd16862a2df33.jpg" alt="apatche start" /></p>
+
+<p>আপনি দেখতে পাচ্ছেন যে ওয়ার্ডপ্রেস ডাটাবেস সফলভাবে তৈরি করা হয়েছে।.</p>
+
+<h4 id="download-wordpress">Download WordPress</h4>
+<p>Successive versions of WordPress: <a href="https://wordpress.org/download/releases/">https://wordpress.org/download/releases/</a></p>
+
+<p>latest version ডাউনলোড করার পর তা unzip  করি wget দিয়ে:</p>
+
+<pre><code class="language-Bash">wget https://wordpress.org/wordpress-5.7.zip
+</code></pre>
+<p>Unzip</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip wordpress-5.7.zip
+</code></pre></div></div>
+
+<p>এবার ওয়াডপ্রেস ফল্ডার টি nginx এ মুভ করি।</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv wordpress/ $PREFIX/share/nginx/html
+</code></pre></div></div>
+<p>just php-fpm and Nginx শুরু করবো:</p>
+
+<pre><code class="language-Bash">php-fpm
+nginx
+</code></pre>
+<p>Of course, যদি php-fpm and Nginx services চালু হলে পরবর্তী ধাপে যাব</p>
+
+<h4 id="install-wordpress">Install WordPress</h4>
+<p>Browser access: <a href="http://127.0.0.1/wordpress/">http://127.0.0.1/wordpress/</a></p>
+
+<p>WordPress এ এখন আপনার ডাটাবেজ ইনফরমেশন দিয়ে সেটআপ করুন!</p>
+:ET
