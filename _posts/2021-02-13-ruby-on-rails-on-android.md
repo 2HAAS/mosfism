@@ -77,7 +77,7 @@ pkg install clang make
 এবং এগুলি কৌশলটি করবে:
 
 ```
-pkg install pkg-config libxml2 libxslt
+pkg install pkg-config libxml2 libxslt binutils
 ```
 এরপর নিচের জেম ইনস্টল করবো!
 ```
