@@ -1,6 +1,6 @@
 ---
 layout: author
-photo: https://2haas.com/assets/img/author/ajpalok.jpg
+photo: https://0.gravatar.com/avatar/1b65d7b912dbb973c6a2a1a2f0a645ae?s=128
 name: ajpalok
 display_name: Abrar Jahin
 position: Chief Editor
